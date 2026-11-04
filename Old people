@@ -1,0 +1,285 @@
+import os
+
+# Ensure the output directory exists
+os.makedirs('generated', exist_ok=True)
+
+# Sophisticated, accessible cream & blue layout built for mature audiences
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophisticated Modern Living</title>
+    <style>
+        /* Modern CSS Reset & High Contrast Defaults */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+        }
+
+        :root {
+            --bg-cream: #FAF6EE;        /* Premium warm cream background */
+            --bg-sand: #F1EAE0;         /* Deeper cream contrast tone */
+            --text-dark: #1E293B;       /* High-contrast charcoal text */
+            --blue-deep: #1A365D;       /* Classic trustworthy navy blue */
+            --blue-slate: #4A6B82;      /* Muted accent slate blue */
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 1.15rem; /* Enhanced readability for 40+ demographic */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--bg-cream);
+            border-bottom: 1px solid var(--bg-sand);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--blue-deep);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue-slate);
+        }
+
+        /* Hero Section */
+        header {
+            padding: 8rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-sand) 100%);
+            border-bottom: 1px solid var(--bg-sand);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: var(--blue-deep);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 1.35rem;
+            color: #475569;
+            margin-bottom: 3rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--blue-deep);
+            color: #FFFFFF;
+            padding: 1rem 2.5rem;
+            border-radius: 4px; /* Structured, minimal elegance over hyper-round buttons */
+            text-decoration: none;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--blue-slate);
+        }
+
+        /* Value Proposition Grid */
+        .main-content {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+
+        .card {
+            background: #FFFFFF;
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--bg-sand);
+            box-shadow: 0 4px 20px rgba(26, 54, 93, 0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-icon {
+            color: var(--blue-slate);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            color: var(--blue-deep);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #475569;
+        }
+
+        /* Statement Block */
+        .statement-block {
+            background-color: var(--blue-deep);
+            color: var(--bg-cream);
+            padding: 6rem 2rem;
+            text-align: center;
+            margin-top: 6rem;
+        }
+
+        .statement-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .statement-block h2 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .statement-block p {
+            color: var(--bg-sand);
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9CA3AF;
+            text-align: center;
+            padding: 3rem 2rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 0.95rem;
+            border-top: 1px solid #1F2937;
+        }
+
+        footer p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                font-size: 1.15rem;
+            }
+            .nav-links {
+                display: none; /* Simplifies layout for smaller devices */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Aethel & Slate</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="hero-content">
+            <h1>Clarity, Elegance, and Intentional Design</h1>
+            <p>A sophisticated online space tailored for discerning individuals who appreciate quiet luxury, distraction-free experiences, and seamless utility.</p>
+            <a href="#explore" class="btn-primary">Explore Services</a>
+        </div>
+    </header>
+
+    <main class="main-content" id="explore">
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon">🙒</div>
+                <h2>Accessible Layouts</h2>
+                <p>Designed with enhanced baseline typography, optimal line-heights, and thoughtful contrast ratios that ensure comfortable long-form reading on any screen.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🙒</div>
+                <h2>Quiet Aesthetics</h2>
+                <p>No pop-ups, no animations that flash, and no layout shifts. Enjoy an uncluttered, modern approach focused squarely on high-value written copy.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🙒</div>
+                <h2>Secured Simplicity</h2>
+                <p>Built using ultra-clean, minimal web configurations optimized to preserve privacy while serving lightning-fast load times across desktop and tablet applications.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="statement-block">
+        <div class="statement-inner">
+            <h2>Experience Web Design with Maturity</h2>
+            <p>We build spaces that reflect structured professionalism, respect your screen time, and deliver actionable information without unnecessary noise.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aethel & Slate. Handcrafted with consideration. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+"""
+
+# Save to target destination
+with open('generated/website.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
